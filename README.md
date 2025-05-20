@@ -1,11 +1,11 @@
-# NativeFederation
+# Native Federation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
 ## Steps to run the micro frontend with Native Federation
 
 1. Clone the repository:
-- [ ] git clone https://github.com/KasiaKasia/ssr-tailwind-company-hierarchical-structure.git
+- [ ] git clone https://github.com/KasiaKasia/angular-micro-frontends-with-native-federation.git
 
 2. In the project directory, run the following commands:
 - [ ] `npm i`
