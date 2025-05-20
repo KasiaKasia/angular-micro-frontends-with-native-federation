@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start_products": "ng serve products -o",
-    "start_shell": "ng serve shell -o",
+    "start_products": "ng serve products",
+    "start_shell": "ng serve shell",
     "build": "ng build",
     "build_shell": "ng build shell",
     "build_products": "ng build products",

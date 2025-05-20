@@ -2,17 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
-## Development server
+## Steps to run the micro frontend with Native Federation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone the repository:
+- [ ] git clone https://github.com/KasiaKasia/ssr-tailwind-company-hierarchical-structure.git
+
+2. In the project directory, run the following commands:
+- [ ] `npm i`
+- [ ] `npm run build_shell`
+- [ ] `npm run build_products` 
+- [ ] `npm run start_shell`
+- [ ] `npm run start_products`
+
+3. Next, open a web browser and navigate to the following addresses: 
+- [ ] http://localhost:4200/ 
+- [ ] http://localhost:4201/
+
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name --project application-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project application-name`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build_shell` and `npm run build_product` to build the project micro frontends with Native Federation. The build artifacts will be stored in the `dist/shell` and `dist/products` directory.
 
 ## Running unit tests
 
