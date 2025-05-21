@@ -9,7 +9,8 @@
     "build": "ng build",
     "build_shell": "ng build shell",
     "build_products": "ng build products",
-    "watch": "ng build --watch --configuration development",
+    "watch_shell": "ng build shell --watch --configuration development",
+    "watch_products": "ng build products --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
@@ -23,8 +24,11 @@
     "@angular/platform-browser-dynamic": "^19.2.11",
     "@angular/router": "^19.2.11",
     "@softarc/native-federation-node": "^2.0.10",
+    "@tailwindcss/postcss": "^4.1.7",
     "es-module-shims": "^1.5.12",
+    "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.1.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
@@ -40,6 +44,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "tslib": "^2.3.0",
     "typescript": "~5.5.4"
   }
 }
