@@ -11,12 +11,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [ ] `npm i`
 - [ ] `npm run build_shell`
 - [ ] `npm run build_products` 
+- [ ] `npm run build_employees` 
 - [ ] `npm run start_shell`
 - [ ] `npm run start_products`
+- [ ] `npm run start_employees`
 
 3. Next, open a web browser and navigate to the following addresses: 
 - [ ] http://localhost:4200/ 
 - [ ] http://localhost:4201/
+- [ ] http://localhost:4202/
 
 
 ## Code scaffolding
