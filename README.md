@@ -15,10 +15,13 @@ of type `--type dynamic-host`
 
 - [ ] Creating a remote application by specifying the type `--type remote` in the command.
 - [ ] In the main application in the `federation.manifest.json` file there should be a list of applications, e.g:
-` { `
-    ` "products": "http://localhost:4201/remoteEntry.json",` 
-    ` "employees": "http://localhost:4202/remoteEntry.json" `
-` } `
+```
+    {
+        "products": "http://localhost:4201/remoteEntry.json",
+        "employees": "http://localhost:4202/remoteEntry.json"
+    }
+
+```
 - [ ] Each application should have a `federation.config.js` configuration file.
 - [ ] Remote applications in the `federation.config.js` configuration file should include the `exposes` property. Below is a sample configuration for a remote application:
 ```
