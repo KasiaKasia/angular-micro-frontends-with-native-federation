@@ -57,10 +57,7 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"polyfills": [
-							"zone.js",
-							"zone.js/testing"
-						],
+						"polyfills": [],
 						"tsConfig": "projects/shell/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
@@ -80,7 +77,6 @@
 						"index": "projects/shell/src/index.html",
 						"browser": "projects/shell/src/main.ts",
 						"polyfills": [
-							"zone.js",
 							"es-module-shims"
 						],
 						"tsConfig": "projects/shell/tsconfig.app.json",
@@ -189,10 +185,7 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"polyfills": [
-							"zone.js",
-							"zone.js/testing"
-						],
+						"polyfills": [],
 						"tsConfig": "projects/products/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
@@ -212,7 +205,6 @@
 						"index": "projects/products/src/index.html",
 						"browser": "projects/products/src/main.ts",
 						"polyfills": [
-							"zone.js",
 							"es-module-shims"
 						],
 						"tsConfig": "projects/products/tsconfig.app.json",
@@ -307,10 +299,7 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"polyfills": [
-							"zone.js",
-							"zone.js/testing"
-						],
+						"polyfills": [],
 						"tsConfig": "projects/employees/tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
 						"assets": [
@@ -332,7 +321,6 @@
 						"index": "projects/employees/src/index.html",
 						"browser": "projects/employees/src/main.ts",
 						"polyfills": [
-							"zone.js",
 							"es-module-shims"
 						],
 						"tsConfig": "projects/employees/tsconfig.app.json",

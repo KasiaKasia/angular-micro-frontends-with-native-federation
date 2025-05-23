@@ -6,7 +6,7 @@ import { NavbarComponent } from "./core/navbar/navbar.component";
 
 @Component({
   selector: 'app-shell-root',
-  imports: [RouterOutlet,   FooterComponent, NavbarWcagComponent, NavbarComponent],
+  imports: [RouterOutlet, FooterComponent, NavbarWcagComponent, NavbarComponent],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -5,7 +5,7 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'start', pathMatch: 'full' },
-      {
+    {
         path: 'employees',
         loadComponent: () =>
             loadRemoteModule('employees', './Component').then((m) => m.AppComponent),
