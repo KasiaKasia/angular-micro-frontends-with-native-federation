@@ -10,7 +10,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 `ng generate application application_name`
 
 - [ ] Creating the main (host) application by specifying in the command:
-`ng g @angular-architects/native-federation:init --project application_name --port local_application_port --type remote_or_dynamic-host`
+```
+ng g @angular-architects/native-federation:init --project application_name --port local_application_port --type remote_or_dynamic-host
+```
 of type `--type dynamic-host`
 
 - [ ] Creating a remote application by specifying the type `--type remote` in the command.
