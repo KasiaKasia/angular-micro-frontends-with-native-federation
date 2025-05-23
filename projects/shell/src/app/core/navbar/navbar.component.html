@@ -1,0 +1,24 @@
+<nav class="bg-sky-800/90 p-4">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="hover:underline p-3 focus:outline-none focus-visible:ring-3 focus-visible:ring-white" tabindex="0" role="heading" aria-label="Struktura hierarchiczna firmy">
+    <app-shell-angular-logo />
+        </div>      
+        <div class="flex flex-col md:flex-row gap-6 ">
+            <app-router-link 
+                [routerPath]="'/start'" 
+                [cssClass]="'hover:underline p-3 focus:outline-none focus-visible:ring-3 focus-visible:ring-white cursor-pointer'"
+                [cssClassActive]="'font-bold'" 
+                [routerLinkTitle]="'Start'" />
+            <app-router-link 
+                [routerPath]="'/employees'" 
+                [cssClass]="'hover:underline p-3 focus:outline-none focus-visible:ring-3 focus-visible:ring-white cursor-pointer'" 
+                [cssClassActive]="'font-bold'" 
+                [routerLinkTitle]="'Lista pracowników'" />
+            <app-router-link 
+                [routerPath]="'/products'" 
+                [cssClass]="'hover:underline p-3 focus:outline-none focus-visible:ring-3 focus-visible:ring-white cursor-pointer'" 
+                [cssClassActive]="'font-bold'" 
+                [routerLinkTitle]="'Lista produktów'" />
+        </div>
+    </div>
+</nav>

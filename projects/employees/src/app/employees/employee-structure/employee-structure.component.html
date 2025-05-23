@@ -1,0 +1,22 @@
+<hr class="border border-gray-700 my-4" />
+<h2 class="font-semibold mt-12 mb-8 ml-5 md:ml-10 lg:ml-15">Wizualizacja struktury pracowników firmy (wypunktowana)</h2>
+<div class="font-semibold mt-12 mb-8 ml-5 md:ml-10 lg:ml-15">
+    <p>ID: {{selectedName()?.id}}</p>
+    <p>{{selectedName()?.firstName}} {{selectedName()?.lastName}}</p>
+</div>
+
+<ul>
+    @for (emp of foundEmployee(); track emp.id) {
+    <li>
+        <app-employee-nested-list [node]="emp" />
+    </li>
+    }
+</ul>
+
+<hr class="border border-gray-700 my-4" />
+<div class="flex flex-col items-center">
+    <h2 class="font-semibold mt-12 mb-8 ml-5 md:ml-10 lg:ml-15">Wizualizacja struktury pracowników firmy (widok drzewa)</h2>
+    @for (emp of foundEmployee(); track emp.id) {
+        <app-tree-node [node]="emp" [isRoot]="true" />
+    }
+</div>

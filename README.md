@@ -23,6 +23,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng generate component component-name --project application-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project application-name`.
 
+The command `ng generate application application_name` adds a new application. To integrate the application with Native Federation, use the following command:
+`ng g @angular-architects/native-federation:init --project application_name --port local_application_port --type remote_or_dynamic-host`.
+
 ## Build
 
 Run `npm run build_shell` and `npm run build_product` to build the project micro frontends with Native Federation. The build artifacts will be stored in the `dist/shell` and `dist/products` directory.

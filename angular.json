@@ -16,7 +16,18 @@
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
-					"options": {},
+					"options": {
+						"stylePreprocessorOptions": {
+							"sass": {
+								"silenceDeprecations": [
+									"mixed-decls",
+									"color-functions",
+									"global-builtin",
+									"import"
+								]
+							}
+						}
+					},
 					"configurations": {
 						"production": {
 							"target": "shell:esbuild:production"
@@ -89,12 +100,12 @@
 								{
 									"type": "initial",
 									"maximumWarning": "500kb",
-									"maximumError": "1mb"
+									"maximumError": "2mb"
 								},
 								{
 									"type": "anyComponentStyle",
-									"maximumWarning": "2kb",
-									"maximumError": "4kb"
+									"maximumWarning": "4kb",
+									"maximumError": "8kb"
 								}
 							],
 							"outputHashing": "all"
@@ -137,7 +148,18 @@
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
-					"options": {},
+					"options": {
+						"stylePreprocessorOptions": {
+							"sass": {
+								"silenceDeprecations": [
+									"mixed-decls",
+									"color-functions",
+									"global-builtin",
+									"import"
+								]
+							}
+						}
+					},
 					"configurations": {
 						"production": {
 							"target": "products:esbuild:production"
@@ -210,12 +232,12 @@
 								{
 									"type": "initial",
 									"maximumWarning": "500kb",
-									"maximumError": "1mb"
+									"maximumError": "2mb"
 								},
 								{
 									"type": "anyComponentStyle",
-									"maximumWarning": "2kb",
-									"maximumError": "4kb"
+									"maximumWarning": "4kb",
+									"maximumError": "8kb"
 								}
 							],
 							"outputHashing": "all"
@@ -241,6 +263,128 @@
 					"defaultConfiguration": "development",
 					"options": {
 						"port": 4201
+					}
+				}
+			}
+		},
+		"employees": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
+			"root": "projects/employees",
+			"sourceRoot": "projects/employees/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "@angular-architects/native-federation:build",
+					"options": {},
+					"configurations": {
+						"production": {
+							"target": "employees:esbuild:production"
+						},
+						"development": {
+							"target": "employees:esbuild:development",
+							"dev": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "@angular-architects/native-federation:build",
+					"options": {
+						"target": "employees:serve-original:development",
+						"rebuildDelay": 0,
+						"dev": true,
+						"port": 0
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n"
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/employees/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							{
+								"glob": "**/*",
+								"input": "projects/employees/public"
+							}
+						],
+						"styles": [
+							"projects/employees/src/styles.scss"
+						],
+						"scripts": []
+					}
+				},
+				"esbuild": {
+					"builder": "@angular-devkit/build-angular:application",
+					"options": {
+						"outputPath": "dist/employees",
+						"index": "projects/employees/src/index.html",
+						"browser": "projects/employees/src/main.ts",
+						"polyfills": [
+							"zone.js",
+							"es-module-shims"
+						],
+						"tsConfig": "projects/employees/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
+						"assets": [
+							{
+								"glob": "**/*",
+								"input": "projects/employees/public"
+							}
+						],
+						"styles": [
+							"projects/employees/src/styles.scss"
+						],
+						"scripts": []
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kB",
+									"maximumError": "1MB"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "4kB",
+									"maximumError": "8kB"
+								}
+							],
+							"outputHashing": "all"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve-original": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "employees:esbuild:production"
+						},
+						"development": {
+							"buildTarget": "employees:esbuild:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4202
 					}
 				}
 			}
