@@ -2,6 +2,32 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
 
+# Main assumptions:
+- [ ] Creating an Angular workspace:
+`ng new project_name_native_federation --create-application=false`
+
+- [ ] Splitting the application by functionality:
+`ng generate application application_name`
+
+- [ ] Creating the main (host) application by specifying in the command:
+`ng g @angular-architects/native-federation:init --project application_name --port local_application_port --type remote_or_dynamic-host`
+of type `--type dynamic-host`
+
+- [ ] Creating a remote application by specifying the type `--type remote` in the command.
+- [ ] In the main application in the `federation.manifest.json` file there should be a list of applications, e.g:
+` { `
+    ` "products": "http://localhost:4201/remoteEntry.json",` 
+    ` "employees": "http://localhost:4202/remoteEntry.json" `
+` } `
+- [ ] Each application should have a `federation.config.js` configuration file.
+- [ ] Remote applications in the `federation.config.js` configuration file should include the `exposes` property. Below is a sample configuration for a remote application:
+```
+    exposes: {
+    './Component': './projects/employees/src/app/app.component.ts',
+    },
+
+```
+
 ## Steps to run the micro frontend with Native Federation
 
 1. Clone the repository:
